@@ -66,12 +66,12 @@ function About() {
             >
               Skype
             </a>
-            <a className="about-social__link" onClick={openMail}>
+            <div className="about-social__link" onClick={openMail}>
               email
-            </a>
-            <a className="about-social__link" onClick={openPhone}>
+            </div>
+            <div className="about-social__link" onClick={openPhone}>
               Phone
-            </a>
+            </div>
           </div>
         </div>
       </div>
