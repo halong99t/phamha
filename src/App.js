@@ -20,26 +20,24 @@ function App() {
 
   const particlesLoaded = useCallback(async (container) => {}, []);
   return (
-    <div>
-      <ToastContainer />
-      <div className="Container">
-        <Router>
-          <Menu />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/work" component={Project} />
-            <Route component={NotFound} />
-          </Switch>
-        </Router>
-      </div>
+    <>
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={particiles}
       />
-    </div>
+      <ToastContainer />
+      <Router>
+        <Menu />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/work" component={Project} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
