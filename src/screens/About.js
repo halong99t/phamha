@@ -26,7 +26,7 @@ function About() {
           works.
         </div>
         <div className="about-text__body">
-          i'm a front-end developer with over 4 years of experience.I is
+          i'm a front-end developer with over 3 years of experience.I is
           passionate about technology and cryptocurrency.
           <br />
           <br />I has worked in the fields of software development
