@@ -29,7 +29,7 @@ function About() {
           i'm a front-end developer with over 3 years of experience.I am
           passionate about technology and cryptocurrency.
           <br />
-          <br />I has worked in the fields of software development
+          <br />I work in the fields of software development
           <br />
           <TextLoop interval={2000}>
             <span className="about-text__title-big">E-commerce</span>
