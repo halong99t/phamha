@@ -4,10 +4,11 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import Menu from "./components/Menu";
 import Home from "./screens/Home";
-import NotFound from "./screens/NotFound";
+// import NotFound from "./screens/NotFound";
 import Project from "./screens/Project";
 import About from "./screens/About";
 import { ToastContainer } from "react-toastify";
+import { MenuProvider } from "./provider/Menu";
 import "react-toastify/dist/ReactToastify.css";
 import "./assets/styles.css";
 
@@ -29,12 +30,14 @@ function App() {
       />
       <ToastContainer />
       <Router>
-        <Menu />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/work" component={Project} />
-          <Route component={NotFound} />
+          <MenuProvider>
+            <Menu />
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/work" component={Project} />
+            {/* <Route path="**" component={NotFound} /> */}
+          </MenuProvider>
         </Switch>
       </Router>
     </>

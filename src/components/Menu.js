@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "../assets/menu.css";
+import MenuContext from "../provider/Menu";
 
 function Menu() {
-  const location = useLocation();
-  const [menuOpen, toggleMenu] = useState(false);
-
-  useEffect(() => toggleMenu(false), [location]);
+  const { menuOpen, toggleMenu } = useContext(MenuContext);
 
   const handleDownload = () => {
     const requestOptions = {
